@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Solicitações</title>
+    <link rel="stylesheet" href="../visual/Editar.css">
+    <script src="js/filtros.js"></script>
+</head>
+<body>
+    <h1>Gerenciamento de Solicitações</h1>
+
+    <label for="filtroStatus">Filtrar por Status:</label>
+    <select id="filtroStatus" onchange="aplicarFiltro();">
+        <option value="">Todos</option>
+        <option value="aberto">Aberto</option>
+        <option value="em andamento">Em andamento</option>
+        <option value="resolvido">Resolvido</option>
+    </select>
+
+    <label for="filtroCriticidade">Filtrar por Urgência:</label>
+    <select id="filtroCriticidade" onchange="aplicarFiltro();">
+        <option value="">Todas</option>
+        <option value="baixa">Pouco Urgente</option>
+        <option value="media">Urgente</option>
+        <option value="alta">Muito Urgente</option>
+    </select>
+    <label for="filtroCriticidade">Filtrar por Funcionário:</label>
+    <select id="filtroCriticidade" onchange="aplicarFiltro();">
+        <option value="">Todas</option>
+        <option value="baixa">Lucas Souza</option>
+        <option value="media">Renato Monteiro</option>
+        <option value="alta">Sofia Barbosa</option>
+        <option value="alta">Livia Andrade</option>
+        <option value="alta">Sofia Barbosa</option>
+    </select>
+
+    <table border="1" id="tabelaChamados">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ID Cliente</th>
+                <th>Status</th>
+                <th>Urgência</th>
+                <th>Funcionário</th>
+            </thead>
+            <tbody>
+                <!-- Os dados serão carregados dinamicamente aqui -->
+            </tbody>
+        </table>
+        <br>
+        <a href="Chamados.php" id="sair-button"><button>Sair</button></a>
+        <a href="Chamados.php" id="sair-button"><button>Atualizar</button></a>
+    </body>
+    </html>
