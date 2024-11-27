@@ -1,6 +1,6 @@
 <?php
 $host = "localhost";
-$dbname = "sistema_chamados";
+$dbname = "Gerenciador_de_Tarefas";
 $user = "root";
 $password = "root";
 

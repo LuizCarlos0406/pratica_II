@@ -3,18 +3,18 @@ include 'db_connection.php';
 
 $crit = $_GET['crit'] ?? null;
 $status = $_GET['status'] ?? null;
-$colaborador_id = $_GET['colaborador_id'] ?? null;
+$usuario_id = $_GET['usuario_id'] ?? null;
 
-$sql = "SELECT * FROM chamados WHERE 1=1";
+$sql = "SELECT * FROM tarefas WHERE 1=1";
 
-if ($crit) $sql .= " AND criticidade = '$crit'";
+if ($Priori) $sql .= " AND Prioridade = '$Prori'";
 if ($status) $sql .= " AND status = '$status'";
-if ($colaborador_id) $sql .= " AND colaborador_id = $colaborador_id";
+if ($usuario_id) $sql .= " AND usuario = $usuario_id";
 
 $stmt = $conn->query($sql);
 $chamados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($chamados as $chamado) {
-    echo "ID: {$chamado['id']} - {$chamado['descricao']}<br>";
+foreach ($tarefas as $tarefas) {
+    echo "ID: {$tarefas['id']} - {$tarefas['descricao']}<br>";
 }
 ?>

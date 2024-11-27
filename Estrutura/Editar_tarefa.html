@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Solicitações</title>
+    <link rel="stylesheet" href="../visual/Editar.css">
+    <script src="js/filtros.js"></script>
+</head>
+<body>
+    <h1>Gerenciamento de Solicitações</h1>
+
+    <label for="filtroStatus">Filtrar por Status:</label>
+    <select id="filtroStatus" onchange="aplicarFiltro();">
+        <option value="">Todos</option>
+        <option value="aberto">A fazer</option>
+        <option value="em andamento">Fazendo</option>
+        <option value="resolvido">Pronto</option>
+    </select>
+
+    <label for="filtroPrioridade">Filtrar por Prioridade:</label>
+    <select id="filtroPrioridade" onchange="aplicarFiltro();">
+        <option value="">Todas</option>
+        <option value="baixa">Baixa</option>
+        <option value="media">Média</option>
+        <option value="alta">Alta</option>
+    </select>
+    <label for="filtroPrioridade">Filtrar por Usuario:</label>
+    <select id="filtroPrioridade" onchange="aplicarFiltro();">
+        <option value="">Todas</option>
+        <option value="baixa">Thiago Cabral Wasem</option>
+        <option value="media">Luiz Carlos Fagundes</option>
+        <option value="alta">Carlos Eduardo Moreira</option>
+        <option value="alta">Alessande Cristina</option>
+        <option value="alta">Amanda Temido Marques Alves</option>
+    </select>
+
+    <table border="1" id="tabelaChamados">
+        <thead>
+            <tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <br>
+        <a href="tarefas.php" id="sair-button"><button>Sair</button></a>
+        <a href="tarefas.php" id="sair-button"><button>Atualizar</button></a>
+    </body>
+    </html>
